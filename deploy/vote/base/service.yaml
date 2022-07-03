@@ -10,9 +10,8 @@ spec:
   ports:
   - name: "80"
     port: 80
-    nodePort: 30333
     protocol: TCP
     targetPort: 80
   selector:
     app: vote
-  type: NodePort
+  type: LoadBalancer
