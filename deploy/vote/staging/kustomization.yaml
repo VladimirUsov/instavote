@@ -22,3 +22,7 @@ commonLabels:
 
 commonAnnotations:
   supported-by: "vladimir@m-kopa"
+
+configMapGenerator:
+  - name: vote-options
+    env: options.env
