@@ -3,19 +3,15 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: vote
-    tier: front
-  name: vote
+    app: worker
+    tier: back
+  name: worker
 spec:
-  replicas: 5
+  replicas: 1
   template:
     spec:
       $setElementOrder/containers:
-      - name: vote
+      - name: worker
       containers:
-      - image: schoolofdevops/vote:v3
-        name: vote
-        envFrom:
-          - configMapRef: 
-              name: vote-options
-              optional: true
+      - image: schoolofdevops/worker:v1
+        name: worker
