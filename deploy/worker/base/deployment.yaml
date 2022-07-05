@@ -4,7 +4,6 @@ metadata:
   creationTimestamp: null
   labels:
     app: worker
-    tier: back
   name: worker
 spec:
   replicas: 1
@@ -17,9 +16,8 @@ spec:
       creationTimestamp: null
       labels:
         app: worker
-        tier: back
     spec:
       containers:
-      - image: schoolofdevops/worker:v1
+      - image: schoolofdevops/worker:latest
         name: worker
         resources: {}
