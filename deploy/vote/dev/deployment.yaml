@@ -13,6 +13,6 @@ spec:
       $setElementOrder/containers:
       - name: vote
       containers:
-      - image: schoolofdevops/vote:v4
+      - image: schoolofdevops/vote:v5
         name: vote
 
